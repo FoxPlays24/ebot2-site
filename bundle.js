@@ -224,7 +224,6 @@ client.on('message', (channel, tags, message, self) => {
         count++;
         docCount.textContent = `Кол-во бладтрейлов за стрим: ${count}`;
     }
-    console.log(tags.color);
 });
 },{"./settings.json":13,"tmi.js":4}],4:[function(require,module,exports){
 "use strict";

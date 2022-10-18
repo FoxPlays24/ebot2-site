@@ -2,7 +2,7 @@ const tmi = require('tmi.js'),
     { channel, username, password } = require('./settings.json');
 
 const options = {
-    options: { debug: true },
+    options: { debug: false },
     connection: {
         recconect: true,
         secure: true
@@ -27,8 +27,9 @@ client.connect().catch(console.error);
 let count = 0;
 
 client.on('message', (channel, tags, message, self) => {
-    if (self) return;
-    //console.log(`${tags['display-name']}: ${message}`);
+    //if (self) return;
+    console.log(`${tags['display-name']}: ${message}`);
+    if (tags['message-type'] == 'whisper') return;
     docChat.textContent = `${tags['display-name']}: ${message}`;
     docChat.style.color = `${tags.color}`;
     if (message.includes('BloodTrail')) {

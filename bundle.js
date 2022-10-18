@@ -216,7 +216,7 @@ client.connect().catch(console.error);
 let count = 0;
 
 client.on('message', (channel, tags, message, self) => {
-    if (self) return;
+    //if (self) return;
     //console.log(`${tags['display-name']}: ${message}`);
     docChat.textContent = `${tags['display-name']}: ${message}`;
     docChat.style.color = `${tags.color}`;

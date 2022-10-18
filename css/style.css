@@ -40,22 +40,11 @@ body {
 /* Но что-то обязательно появиться! */
 .but {
     width: 657px;   
-    height: 70px;
+    height: 42px;
     font-weight: 300;
     font-size: 19px;
     letter-spacing: -0.035em;
     color: #6C6C6C;
-}
-
-/* мб */
-.maybe {
-    width: 657px;
-    height: 29px;
-    height: 29px;
-    font-weight: 300;
-    font-size: 19px;
-    letter-spacing: -0.035em;
-    color: #373737;
 }
 
 .rectangle {
@@ -66,4 +55,21 @@ body {
     height: 32px;
     background: #F0F0F0;
     animation: spin 50s linear infinite;
+}
+
+.count {
+    width: 657px;
+    height: 8px;
+    font-weight: 300;
+    font-size: 19px;
+    letter-spacing: -0.035em;
+    color: orangered;
+}
+
+.chat {
+    width: 657px;
+    height: 70px;
+    font-weight: 300;
+    font-size: 19px;
+    letter-spacing: -0.035em;
 }

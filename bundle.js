@@ -3236,7 +3236,7 @@ var _ = module.exports = {
 }).call(this)}).call(this,require('_process'))
 },{"_process":2}],13:[function(require,module,exports){
 module.exports={
-  "channel": "FoxPlays24",
+  "channel": "5opka",
   "username": "FoxPlays24",
   "password": "oauth:00ynx81oqa6tdel9pwiq8raz1i2rpc"
 }

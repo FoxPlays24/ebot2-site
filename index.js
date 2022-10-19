@@ -48,7 +48,7 @@ client.on('message', (channel, tags, message, self) => {
         client.say(channel, `/w ${tags.username} команда 2 B)`);
     }*/
 
-    //console.log(`${tags['display-name']}: ${message}`);
+    console.log(`${tags['display-name']}: ${message}`);
 
     docChat.textContent = `${tags['display-name']}: ${message}`;
     docChat.style.color = `${tags.color}`;

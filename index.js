@@ -2,7 +2,7 @@ const tmi = require('tmi.js'),
     { channel, username, password } = require('./settings.json');
 
 const options = {
-    options: { debug: true },
+    options: { debug: false },
     connection: {
         recconect: true,
         secure: true

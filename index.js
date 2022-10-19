@@ -31,7 +31,7 @@ client.on('message', (channel, tags, message, self) => {
     console.log(`${tags['display-name']}: ${message}`);
     if (tags['message-type'] == 'whisper') {
         client.on('message', (channel, tags, message, self) => {
-            if (self) return;
+            //if (self) return;
             if (message.toLowerCase() === 'ты ботик?') {
                 client.say(channel, `я ботик MrDestructoid`);
             }

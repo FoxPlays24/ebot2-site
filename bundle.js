@@ -191,7 +191,7 @@ const tmi = require('tmi.js'),
     { channel, username, password } = require('./settings.json');
 
 const options = {
-    options: { debug: false },
+    options: { debug: true },
     connection: {
         recconect: true,
         secure: true
@@ -210,22 +210,35 @@ const client = new tmi.Client(options);
 client.connect().catch(console.error);
 
 /*client.on('connected', () => {
-    client.say(channel, 'BloodTrail');
+    client.say("rintarix2", 'BloodTrail');
 });*/
 
 let count = 0;
 
 client.on('message', (channel, tags, message, self) => {
     //if (self) return;
-    console.log(`${tags['display-name']}: ${message}`);
-    if (tags['message-type'] == 'whisper') {
-        client.on('message', (channel, tags, message, self) => {
-            //if (self) return;
-            if (message.toLowerCase() === 'ты ботик?') {
-                client.say(channel, `я ботик MrDestructoid`);
-            }
-        });
+    //client.say(channel, `/w ${tags['display-name']} ${message}`);
+/*    if (message.toLowerCase() === '!ком1') {
+        client.say(channel, `@${tags.username} команда 1 FBBlock`);
     }
+    if (message.toLowerCase() === '!ком2') {
+        client.say(channel, `/w ${tags.username} команда 2 B)`);
+    }
+
+    if (tags['message-type'] == 'whisper') {
+        if (message.toLowerCase() === '!ком3') {
+            client.say(channel, `/w ${tags.username} команда 3 :D`);
+        }
+        if (message.toLowerCase() === '!ком4') {
+            client.say("rintarix2", `команда 4 CoolCat`);
+        }
+    }
+    if (message.toLowerCase() === '!гачи') {
+        client.say(channel, `/w ${tags.username} команда 2 B)`);
+    }*/
+
+    //console.log(`${tags['display-name']}: ${message}`);
+
     docChat.textContent = `${tags['display-name']}: ${message}`;
     docChat.style.color = `${tags.color}`;
     if (message.includes('BloodTrail')) {
@@ -3243,7 +3256,7 @@ var _ = module.exports = {
 }).call(this)}).call(this,require('_process'))
 },{"_process":2}],13:[function(require,module,exports){
 module.exports={
-  "channel": "FoxPlays24",
+  "channel": "5opka",
   "username": "FoxPlays24",
   "password": "oauth:00ynx81oqa6tdel9pwiq8raz1i2rpc"
 }

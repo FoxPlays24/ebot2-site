@@ -33,7 +33,7 @@ client.on('message', (channel, tags, message, self) => {
         client.on('message', (channel, tags, message, self) => {
             if (self) return;
             if (message.toLowerCase() === 'ты ботик?') {
-                client.say(channel, `@да ${tags.username}, я ботик MrDestructoid`);
+                client.say(channel, `я ботик MrDestructoid`);
             }
         });
     }

@@ -52,8 +52,8 @@ client.on('message', (channel, tags, message, self) => {
 
     docChat.textContent = `${tags['display-name']}: ${message}`;
     docChat.style.color = `${tags.color}`;
-    if (message.includes('BloodTrail')) {
+    if (message.includes('BibleThump')) {
         count++;
-        docCount.textContent = `Кол-во бладтрейлов за стрим: ${count}`;
+        docCount.textContent = `Кол-во библетумов за стрим: ${count}`;
     }
 });

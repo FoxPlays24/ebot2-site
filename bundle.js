@@ -191,7 +191,7 @@ const tmi = require('tmi.js'),
     { channel, username, password } = require('./settings.json');
 
 const options = {
-    options: { debug: true },
+    options: { debug: false },
     connection: {
         recconect: true,
         secure: true
@@ -241,9 +241,9 @@ client.on('message', (channel, tags, message, self) => {
 
     docChat.textContent = `${tags['display-name']}: ${message}`;
     docChat.style.color = `${tags.color}`;
-    if (message.includes('BloodTrail')) {
+    if (message.includes('BibleThump')) {
         count++;
-        docCount.textContent = `Кол-во бладтрейлов за стрим: ${count}`;
+        docCount.textContent = `Кол-во библетумов за стрим: ${count}`;
     }
 });
 },{"./settings.json":13,"tmi.js":4}],4:[function(require,module,exports){

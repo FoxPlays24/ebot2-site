@@ -29,7 +29,14 @@ let count = 0;
 client.on('message', (channel, tags, message, self) => {
     //if (self) return;
     console.log(`${tags['display-name']}: ${message}`);
-    if (tags['message-type'] == 'whisper') return;
+    if (tags['message-type'] == 'whisper') {
+        client.on('message', (channel, tags, message, self) => {
+            if (self) return;
+            if (message.toLowerCase() === 'ты ботик?') {
+                client.say(channel, `@да ${tags.username}, я ботик MrDestructoid`);
+            }
+        });
+    }
     docChat.textContent = `${tags['display-name']}: ${message}`;
     docChat.style.color = `${tags.color}`;
     if (message.includes('BloodTrail')) {

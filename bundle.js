@@ -218,7 +218,14 @@ let count = 0;
 client.on('message', (channel, tags, message, self) => {
     //if (self) return;
     console.log(`${tags['display-name']}: ${message}`);
-    if (tags['message-type'] == 'whisper') return;
+    if (tags['message-type'] == 'whisper') {
+        client.on('message', (channel, tags, message, self) => {
+            if (self) return;
+            if (message.toLowerCase() === 'ты ботик?') {
+                client.say(channel, `@да ${tags.username}, я ботик MrDestructoid`);
+            }
+        });
+    }
     docChat.textContent = `${tags['display-name']}: ${message}`;
     docChat.style.color = `${tags.color}`;
     if (message.includes('BloodTrail')) {
@@ -3236,7 +3243,7 @@ var _ = module.exports = {
 }).call(this)}).call(this,require('_process'))
 },{"_process":2}],13:[function(require,module,exports){
 module.exports={
-  "channel": "5opka",
+  "channel": "FoxPlays24",
   "username": "FoxPlays24",
   "password": "oauth:00ynx81oqa6tdel9pwiq8raz1i2rpc"
 }

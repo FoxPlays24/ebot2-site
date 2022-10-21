@@ -11,42 +11,16 @@ body {
     width: 657px;
     height: 216px;
     left: 34%;
-    top: 410px;
+    top: 80px;
 }
 
-/* FoxPlays */
-.foxplays {
-    width: 657px;
-    height: 27px;
-    font-weight: 300;
-    font-size: 24px;
-}
-
-/* У«десь пока что ничего нет...Ф */
-.title {
-    width: 657px;
-    height: 42px;
-    top: 32px;
-    font-weight: 700;
-    font-size: 30px;
-}
-
-@keyframes spin {
+/*@keyframes spin {
     100% {
         transform: rotate(360deg);
     }
-}
+}*/
 
-/* Ќо что-то об€зательно по€витьс€! */
-.but {
-    width: 657px;   
-    height: 42px;
-    font-weight: 300;
-    font-size: 19px;
-    letter-spacing: -0.035em;
-    color: #6C6C6C;
-}
-
+/*
 .rectangle {
     position: absolute;
     top: -60px;
@@ -55,21 +29,21 @@ body {
     height: 32px;
     background: #F0F0F0;
     animation: spin 50s linear infinite;
-}
+}*/
 
 .count {
+    width: 657px;
+    height: 50px;
+    letter-spacing: -0.035em;
+    color: #e82828;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/*.chat {
     width: 657px;
     height: 8px;
     font-weight: 300;
     font-size: 19px;
     letter-spacing: -0.035em;
-    color: #03d4f1;
-}
-
-.chat {
-    width: 657px;
-    height: 70px;
-    font-weight: 300;
-    font-size: 19px;
-    letter-spacing: -0.035em;
-}
+}*/

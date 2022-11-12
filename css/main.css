@@ -27,7 +27,7 @@ body {
   animation-fill-mode: forwards;
   -webkit-text-size-adjust: none;
   font-weight: 400;
-  font-size: 20%;
+  font-size: 1.3vw;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
